@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+
+    <link rel="stylesheet" href="css/formValidation.css">
+    <script src="js/formValidation.js"></script>
+
+</head>
+
+<body>
+
+    <h1>Create a new Event</h1>
+    <form>
+        Event type :
+        <select id="eventType" required>
+
+            <option value="">Choose One</option>
+
+            <option value="Conference">Conference</option>
+
+            <option value="Seminar">Seminar</option>
+
+            <option value="Meeting">Meeting</option>
+
+        </select>*
+
+        <br>
+        <br>
+
+        Event Title : <input type="text" id="eventTitle" placeholder="Event Title" required 
+        oninvalid="this.setCustomValidity('Must Have an Event Title')"onvalid="this.setCustomValidity('')">*<br>
+        <br>
+        Event Dates : <input type="date" id="date1" required >*
+        to <input type="date" id="date2" required>*
+        <br>
+        <br> Posting Date <input type="date" id="postingDate" required >*
+
+        <br>
+        <br>
+        <input type="checkbox"> Is registration required? <br> <br>
+
+        <input type="checkbox"> Is this event associated with any Family
+
+        programs? <br> <br>
+
+        <input type="checkbox"> Upon Registration Completion,
+
+        Are Users to Recieve an Auto Generated Email? <br> <br>
+
+        <input type="checkbox"> Is There a Point of Contact? <br> <br>
+
+        <input type="checkbox"> Is There a Hosting Command Point of Contact? <br> <br>
+
+        <button type="submit" value="Submit" onclick="formValidation()">Save</button>
+
+        <button type="reset" value="Reset">Cancel</button>
+
+    </form>
+</body>
+
+</html>
